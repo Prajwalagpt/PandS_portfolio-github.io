@@ -1,12 +1,36 @@
-body {
-  background: black;
-  color: white;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.hero, .content {
+body {
+  background: #0e0e0e;
+  color: white;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.hero {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.content {
+  height: 100vh;
+  padding: 50px;
 }
