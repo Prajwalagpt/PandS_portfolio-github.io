@@ -1,19 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const hero = document.querySelector(".hero");
-const content = document.querySelector(".content");
+gsap.from(".hero h1", {
+  y: 100,
+  opacity: 0,
+  duration: 1
+});
 
-const heroHeight = hero.offsetHeight;
-const contentHeight = content.offsetHeight;
-
-gsap.timeline({
+gsap.to(".hero", {
   scrollTrigger: {
-    trigger: hero,
+    trigger: ".hero",
     start: "top top",
-    end: `+=${heroHeight + contentHeight}`,
+    end: "+=500",
     scrub: true,
-    pin: true,
-  }
-})
-.to(".hero h2", { scale: 0.5, opacity: 0 })
-.to(".hero p", { y: -100, opacity: 0 }, "<");
+    pin: true
+  },
+  scale: 0.8
+});
