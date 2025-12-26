@@ -1,0 +1,12 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.hero, .content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
